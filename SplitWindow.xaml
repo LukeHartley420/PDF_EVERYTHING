@@ -1,0 +1,36 @@
+﻿<metro:MetroWindow x:Class="PDF_EVERYTHING.SplitWindow"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+                   Title="PDF Everything - Split" Height="450" Width="800"
+                   ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,0,-6">
+        <Button Content="Upload PDF" Click="UploadPdfButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,6,0,0"/>
+        <Button Content="Save As" Click="SaveAsButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,310,0,0"/>
+        <Button Content="Back to Main Menu" Click="BackToMainMenuButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,353,0,0" Width="118" Height="47" Background="#FF11097D"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Margin="150,10,10,40">
+            <ItemsControl x:Name="PdfPagesPanel" ItemsSource="{Binding PdfPages}" Height="389">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Image Source="{Binding}" Margin="5" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+        <Label x:Name="LabelStatus" Content="" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="179,0,0,11" FontSize="14" Foreground="Red"/>
+        <Label Content="Once a PDF is uploaded. &#xA;Click on the page &#xA;you would like the split &#xA;to occur. It will split at &#xA;the beginning of the &#xA;page that you choose. &#xA;. " HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="118" Foreground="White" FontSize="9"/>
+        <Label Content="You may have more than &#xA;one split. &#xA;&#xA;To undo a split, &#xA;simply click on the page &#xA;again&#xA;&#xA;&#xA;&#xA;&#xA; &#xA;" HorizontalAlignment="Left" Margin="10,166,0,0" VerticalAlignment="Top" Foreground="#FFE61515" FontSize="9" Height="83"/>
+        <Label Content="Click SAVE AS &#xD;&#xA;once you have made &#xD;&#xA;your split selection(s)" HorizontalAlignment="Left" Margin="15,254,0,0" VerticalAlignment="Top" Foreground="#FFE61515" FontSize="9" FontWeight="Bold"/>
+        <Label Content="1." HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontWeight="Bold"/>
+        <Label Content="2." HorizontalAlignment="Left" Margin="10,305,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontWeight="Bold"/>
+        <Button Content="Remove PDF" HorizontalAlignment="Left" VerticalAlignment="Top" Width="73" Margin="36,38,0,0" Click="RemoveAllButton_Click" Height="6" FontSize="8"/>
+
+    </Grid>
+</metro:MetroWindow>
+
+

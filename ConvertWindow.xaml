@@ -1,0 +1,47 @@
+﻿<metro:MetroWindow x:Class="PDF_EVERYTHING.ConvertWindow"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                   xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+                   mc:Ignorable="d"
+                   Title="PDF Everything - Convert To..." Height="450" Width="800"
+                   ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <ComboBox x:Name="FormatComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="145,9,0,0">
+            <ComboBoxItem Content="Word (.docx)" Tag="docx"/>
+            <ComboBoxItem Content="Excel (.xlsx)" Tag="xlsx"/>
+            <ComboBoxItem Content="HTML (.html)" Tag="html"/>
+            <ComboBoxItem Content="Text (.txt)" Tag="txt"/>
+            <ComboBoxItem Content="Image (.png)" Tag="png"/>
+        </ComboBox>
+        <Button Content="Upload PDF(s)" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="49,68,0,0" Click="SelectPdfButton_Click"/>
+        <Button Content="Convert" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="176,68,0,0" Click="ConvertToWordButton_Click" Background="#FF771E1E" Foreground="White"/>
+        <Button Content="Save As" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="300,68,0,0" Click="SaveAsButton_Click"/>
+        <Button Content="Back to Main Menu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="405,59,0,0" Click="BackToMainMenuButton_Click" Background="#FF11097D" Height="36"/>
+        <ListBox x:Name="PdfListBox" HorizontalAlignment="Left" Height="266" VerticalAlignment="Top" Width="760" Margin="10,100,0,0" BorderBrush="White" Background="#FF771E1E">
+            <ListBox.Effect>
+                <DropShadowEffect/>
+            </ListBox.Effect>
+        </ListBox>
+        <Label x:Name="LabelStatus" HorizontalAlignment="Left" VerticalAlignment="Top" Width="407" Margin="363,10,0,0" Height="44" RenderTransformOrigin="0.5,0.5" Foreground="#FFEC0C0C">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Convert to?" HorizontalAlignment="Left" Margin="69,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="1." HorizontalAlignment="Left" Margin="45,6,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold"/>
+        <Label Content="2." HorizontalAlignment="Left" Margin="25,66,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold"/>
+        <Label Content="3." HorizontalAlignment="Left" Margin="152,66,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold"/>
+        <Label Content="4." HorizontalAlignment="Left" Margin="276,64,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold"/>
+        <ProgressBar Name="ProgressBarConvert" Height="20" Margin="10,0,10,10" Visibility="Collapsed" VerticalAlignment="Bottom" IsIndeterminate="True"/>
+        <Button Content="Remove All" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="10,371,0,0" Click="RemoveAllButton_Click"/>
+
+
+    </Grid>
+</metro:MetroWindow>

@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>pdf-file_47192.ico</ApplicationIcon>
+    <AssemblyName>PDF_EVERYTHING</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="tool-box.png" />
+    <None Remove="toolbox.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="pdf-file_47192.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspose.PDF" Version="25.3.0" />
+    <PackageReference Include="BitMiracle.Docotic.Pdf" Version="9.6.17807" />
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.5.1" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.3.0" />
+    <PackageReference Include="Google.Apis" Version="1.69.0" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.69.0" />
+    <PackageReference Include="Google.Apis.Docs.v1" Version="1.69.0.3701" />
+    <PackageReference Include="Google.Apis.Drive.v3" Version="1.69.0.3703" />
+    <PackageReference Include="itext7" Version="9.1.0" />
+    <PackageReference Include="itext7.bouncy-castle-adapter" Version="9.1.0" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.10" />
+    <PackageReference Include="PdfiumViewer" Version="2.13.0" />
+    <PackageReference Include="PdfiumViewer.Native.x86.v8-xfa" Version="2018.4.8.256" />
+    <PackageReference Include="PdfiumViewer.Native.x86_64.v8-xfa" Version="2018.4.8.256" />
+    <PackageReference Include="PdfPig" Version="0.1.10" />
+    <PackageReference Include="PDFsharp" Version="6.1.1" />
+    <PackageReference Include="SautinSoft.PdfFocus" Version="2025.3.20" />
+    <PackageReference Include="Spire.PDF" Version="11.3.0" />
+    <PackageReference Include="Syncfusion.PdfViewer.WPF" Version="28.2.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="tool-box.png" />
+    <Resource Include="toolbox.png" />
+  </ItemGroup>
+
+</Project>
